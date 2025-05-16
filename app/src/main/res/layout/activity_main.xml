@@ -9,15 +9,25 @@
     tools:context=".MainActivity">
 
     <ImageView
+        android:id="@+id/capa"
+        android:layout_width="0dp"
+        android:layout_height="320dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/f1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
         android:id="@+id/imageView"
         android:layout_width="43dp"
         android:layout_height="60dp"
-        android:layout_marginTop="16dp"
-        app:layout_constraintEnd_toStartOf="@+id/textView"
-        app:layout_constraintHorizontal_bias="0.5"
+        android:src="@drawable/logo"
+        app:layout_constraintTop_toTopOf="@id/capa"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:scr="@drawable/logo"/>
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="16dp"/>
 
     <TextView
         android:id="@+id/textView"
@@ -59,28 +69,17 @@
         app:layout_constraintStart_toEndOf="@id/textView2"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
-        android:id="@+id/capa"
-        android:layout_width="0dp"
-        android:layout_height="320dp"
-        android:scaleType="centerCrop"
-        android:src="@drawable/f1"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <TextView
         android:id="@+id/titulo"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="124dp"
+        android:layout_marginStart="120dp"
         android:text="THE LAST OF US"
         android:textColor="@color/menu_navegacao"
         android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="170dp" />
+        tools:layout_editor_absoluteY="169dp" />
 
     <ImageView
         android:id="@+id/filme1"
@@ -110,14 +109,18 @@
         app:layout_constraintStart_toEndOf="@id/filme2"
         tools:layout_editor_absoluteY="406dp" />
 
+
     <Button
         android:id="@+id/button_assistir"
         android:layout_width="125dp"
         android:layout_height="51dp"
         android:layout_marginStart="148dp"
         android:layout_marginTop="20dp"
-        android:drawableLeft="@drawable/icone_play"
+        android:backgroundTint="@color/primaria"
+        android:drawableLeft="@drawable/play_icon"
+        android:drawablePadding="8dp"
         android:text="Assistir"
+        android:textColor="@color/white"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/titulo" />
 
